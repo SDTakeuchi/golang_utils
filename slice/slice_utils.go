@@ -13,23 +13,23 @@ func IndexOf[T comparable](s []T, elem T) int {
 	return -1
 }
 
-func Push[T interface{}](s []T, elem T) []T {
+func Push[T comparable](s []T, elem T) []T {
 	return append(s, elem)
 }
 
-func Pop[T interface{}](s []T) []T {
+func Pop[T comparable](s []T) []T {
 	return s[:len(s)-1]
 }
 
-func Unshift[T interface{}](s []T, elem T) []T {
+func Unshift[T comparable](s []T, elem T) []T {
 	return append([]T{elem}, s...)
 }
 
-func Shift[T interface{}](s []T) []T {
+func Shift[T comparable](s []T) []T {
 	return s[1:]
 }
 
-func Insert[T interface{}](s []T, v T, index int) []T {
+func Insert[T comparable](s []T, v T, index int) []T {
 	var tempVal T
 	s = append(s, tempVal)
 	s = append(s[:index+1], s[index:len(s)-1]...)
@@ -37,6 +37,6 @@ func Insert[T interface{}](s []T, v T, index int) []T {
 	return s
 }
 
-func Remove[T interface{}](s []T, index int) []T {
+func Remove[T comparable](s []T, index int) []T {
 	return append(s[:index], s[index+1:]...)
 }
