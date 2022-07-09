@@ -13,16 +13,12 @@ func IndexOf[T comparable](s []T, elem T) int {
 	return -1
 }
 
-func Push[T comparable](s []T, elem T) []T {
-	return append(s, elem)
+func Prepend[T comparable](s []T, elem T) []T {
+	return append([]T{elem}, s...)
 }
 
 func Pop[T comparable](s []T) []T {
 	return s[:len(s)-1]
-}
-
-func Unshift[T comparable](s []T, elem T) []T {
-	return append([]T{elem}, s...)
 }
 
 func Shift[T comparable](s []T) []T {
