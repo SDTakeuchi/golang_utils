@@ -29,14 +29,14 @@ func Shift[T comparable](s []T) []T {
 	return s[1:]
 }
 
-func Insert[T comparable](s []T, v T, index int) []T {
+func Insert[T comparable](s []T, v T, i int) []T {
 	var tempVal T
 	s = append(s, tempVal)
-	s = append(s[:index+1], s[index:len(s)-1]...)
-	s[index] = v
+	s = append(s[:i+1], s[i:len(s)-1]...)
+	s[i] = v
 	return s
 }
 
-func Remove[T comparable](s []T, index int) []T {
-	return append(s[:index], s[index+1:]...)
+func Remove[T comparable](s []T, i int) []T {
+	return append(s[:i], s[i+1:]...)
 }
