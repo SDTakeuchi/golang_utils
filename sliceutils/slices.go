@@ -1,4 +1,4 @@
-package sliceutils
+package slices
 
 func IndexOf[T comparable](s []T, elem T) int {
 	/*
